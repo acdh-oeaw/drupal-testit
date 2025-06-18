@@ -1,0 +1,25 @@
+uuid: cca4d319-3f22-465b-ae5a-6ab91bd8495b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_relation
+    - paragraphs.paragraphs_type.date_relation
+id: paragraph.date_relation.field_relation
+field_name: field_relation
+entity_type: paragraph
+bundle: date_relation
+label: Relation
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: relations
+      display_name: entity_reference_relations_date
+      arguments: {  }
+field_type: entity_reference

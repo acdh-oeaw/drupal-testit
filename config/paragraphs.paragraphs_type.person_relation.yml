@@ -1,0 +1,10 @@
+uuid: 4b739d5a-9519-4021-a844-cdc1de3f7e2f
+langcode: en
+status: true
+dependencies: {  }
+id: person_relation
+label: 'Person relation'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

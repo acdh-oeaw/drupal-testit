@@ -1,0 +1,29 @@
+uuid: dca40680-02af-48c9-a70a-954e43ab8f3a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_event_category
+    - paragraphs.paragraphs_type.event_relation
+    - taxonomy.vocabulary.event_category
+id: paragraph.event_relation.field_event_category
+field_name: field_event_category
+entity_type: paragraph
+bundle: event_relation
+label: 'Event category'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      event_category: event_category
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

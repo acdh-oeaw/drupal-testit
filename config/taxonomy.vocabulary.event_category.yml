@@ -1,0 +1,9 @@
+uuid: 7d4ae871-be11-4703-843b-1d83349a30c8
+langcode: de
+status: true
+dependencies: {  }
+name: 'Event category'
+vid: event_category
+description: 'Kategorieren sind abstraker als Typen'
+weight: 0
+new_revision: false

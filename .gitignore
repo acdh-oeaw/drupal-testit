@@ -1,0 +1,6 @@
+vendor
+web
+translations
+.editorconfig
+.gitattributes
+.env

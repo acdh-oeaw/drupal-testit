@@ -1,0 +1,59 @@
+uuid: 1d7a6e7c-c7ed-49af-b3c6-d38c85b97455
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.person.field_event_relations
+    - field.field.node.person.field_forename
+    - field.field.node.person.field_identifier_relations
+    - field.field.node.person.field_surname
+    - node.type.person
+  module:
+    - entity_reference_revisions
+    - user
+id: node.person.default
+targetEntityType: node
+bundle: person
+mode: default
+content:
+  field_event_relations:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_forename:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_identifier_relations:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_surname:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

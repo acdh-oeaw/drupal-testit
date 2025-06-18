@@ -1,0 +1,22 @@
+uuid: 24ad8bc7-f891-4ca3-ad0e-9216491b3a5c
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.corporate_body
+id: node.corporate_body.promote
+field_name: promote
+entity_type: node
+bundle: corporate_body
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

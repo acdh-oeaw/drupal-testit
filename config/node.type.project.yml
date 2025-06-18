@@ -1,0 +1,18 @@
+uuid: 6ecf40d4-0e70-42eb-828c-3c347cc734fb
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Project
+type: project
+description: 'A funded or non-funded project that usually is initiated at a corporate body and has persons as project members.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

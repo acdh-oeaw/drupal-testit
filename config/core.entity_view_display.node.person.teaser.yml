@@ -1,0 +1,29 @@
+uuid: 135337f2-ceed-448c-b3a6-e39aa763473e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.person.field_event_relations
+    - field.field.node.person.field_forename
+    - field.field.node.person.field_identifier_relations
+    - field.field.node.person.field_surname
+    - node.type.person
+  module:
+    - user
+id: node.person.teaser
+targetEntityType: node
+bundle: person
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_event_relations: true
+  field_forename: true
+  field_identifier_relations: true
+  field_surname: true
+  langcode: true

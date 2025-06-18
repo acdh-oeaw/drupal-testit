@@ -1,0 +1,9 @@
+uuid: 82e571b4-95a6-4c8a-953a-3aa5d23878a7
+langcode: en
+status: true
+dependencies: {  }
+name: 'Identifier type'
+vid: identifier_type
+description: null
+weight: 0
+new_revision: false

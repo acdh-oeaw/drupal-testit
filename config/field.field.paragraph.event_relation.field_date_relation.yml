@@ -1,0 +1,43 @@
+uuid: 86eecb25-aef1-4d31-9c1d-095800f49980
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_date_relation
+    - paragraphs.paragraphs_type.date_relation
+    - paragraphs.paragraphs_type.event_relation
+  module:
+    - entity_reference_revisions
+id: paragraph.event_relation.field_date_relation
+field_name: field_date_relation
+entity_type: paragraph
+bundle: event_relation
+label: 'Date relation'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      date_relation: date_relation
+    negate: 0
+    target_bundles_drag_drop:
+      date_entry:
+        weight: 6
+        enabled: false
+      date_relation:
+        weight: 7
+        enabled: true
+      event_relation:
+        weight: 8
+        enabled: false
+      identifier_relation:
+        weight: 9
+        enabled: false
+      person_relation:
+        weight: 10
+        enabled: false
+field_type: entity_reference_revisions

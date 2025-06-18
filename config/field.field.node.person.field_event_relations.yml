@@ -1,0 +1,43 @@
+uuid: 3e9e8e1b-9d24-4f8f-93ed-b2f718c9e0e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_relations
+    - node.type.person
+    - paragraphs.paragraphs_type.event_relation
+  module:
+    - entity_reference_revisions
+id: node.person.field_event_relations
+field_name: field_event_relations
+entity_type: node
+bundle: person
+label: 'Event relations'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      event_relation: event_relation
+    negate: 0
+    target_bundles_drag_drop:
+      date_entry:
+        weight: 6
+        enabled: false
+      date_relation:
+        weight: 7
+        enabled: false
+      event_relation:
+        weight: 8
+        enabled: true
+      identifier_relation:
+        weight: 9
+        enabled: false
+      person_relation:
+        weight: 10
+        enabled: false
+field_type: entity_reference_revisions

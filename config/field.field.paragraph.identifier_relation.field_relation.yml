@@ -1,0 +1,29 @@
+uuid: 6b7d0427-e93e-4d4c-9aa8-fd28211e3a71
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_relation
+    - paragraphs.paragraphs_type.identifier_relation
+  content:
+    - 'taxonomy_term:hots_relation:bce74738-5a56-4944-bd87-b2f4166fc2fe'
+id: paragraph.identifier_relation.field_relation
+field_name: field_relation
+entity_type: paragraph
+bundle: identifier_relation
+label: Relation
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    target_uuid: bce74738-5a56-4944-bd87-b2f4166fc2fe
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: relations
+      display_name: entity_reference_relations_identifier
+      arguments: {  }
+field_type: entity_reference

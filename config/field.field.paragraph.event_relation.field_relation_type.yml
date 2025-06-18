@@ -1,0 +1,25 @@
+uuid: d14e3e72-38d4-4970-bf29-db3195fcc52b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_relation_type
+    - paragraphs.paragraphs_type.event_relation
+id: paragraph.event_relation.field_relation_type
+field_name: field_relation_type
+entity_type: paragraph
+bundle: event_relation
+label: 'Relation type'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: relation_types
+      display_name: entity_reference_relation_types_event
+      arguments: {  }
+field_type: entity_reference

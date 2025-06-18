@@ -1,0 +1,10 @@
+uuid: 143c25cd-740c-4d8b-802d-3815145ad0fa
+langcode: en
+status: true
+dependencies: {  }
+id: identifier_relation
+label: 'Identifier relation'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

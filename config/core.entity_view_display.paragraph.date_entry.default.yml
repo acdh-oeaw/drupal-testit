@@ -1,0 +1,104 @@
+uuid: 0bf50ea6-532f-44d2-8108-4e13a73196af
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.date_entry.field_date
+    - field.field.paragraph.date_entry.field_date_precision
+    - field.field.paragraph.date_entry.field_vague_date
+    - paragraphs.paragraphs_type.date_entry
+  module:
+    - datetime
+    - layout_builder
+    - options
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          column_widths: 25-75
+        components:
+          ac14814d-ffc2-4064-ad40-76542c373c86:
+            uuid: ac14814d-ffc2-4064-ad40-76542c373c86
+            region: first
+            configuration:
+              id: 'field_block:paragraph:date_entry:field_date_precision'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: list_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          c27510ea-ad94-43a8-9a2e-1cd3f2e42fc0:
+            uuid: c27510ea-ad94-43a8-9a2e-1cd3f2e42fc0
+            region: second
+            configuration:
+              id: 'field_block:paragraph:date_entry:field_date'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: datetime_default
+                label: hidden
+                settings:
+                  timezone_override: ''
+                  format_type: medium
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          7a94f67c-96de-47bb-8753-f7d3cbd3ef13:
+            uuid: 7a94f67c-96de-47bb-8753-f7d3cbd3ef13
+            region: second
+            configuration:
+              id: 'field_block:paragraph:date_entry:field_vague_date'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+        third_party_settings: {  }
+id: paragraph.date_entry.default
+targetEntityType: paragraph
+bundle: date_entry
+mode: default
+content:
+  field_date:
+    type: datetime_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_date_precision:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_vague_date:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }

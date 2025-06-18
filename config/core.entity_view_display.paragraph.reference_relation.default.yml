@@ -1,0 +1,27 @@
+uuid: a74892b5-a2f5-4da4-af81-197c09de61fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.reference_relation.field_reference_link
+    - paragraphs.paragraphs_type.reference_relation
+  module:
+    - link
+id: paragraph.reference_relation.default
+targetEntityType: paragraph
+bundle: reference_relation
+mode: default
+content:
+  field_reference_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

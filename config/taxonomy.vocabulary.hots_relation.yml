@@ -1,0 +1,9 @@
+uuid: c9ae4c3f-b94e-4560-bc5d-05996a6fd10c
+langcode: en
+status: true
+dependencies: {  }
+name: 'HoTS relation'
+vid: hots_relation
+description: 'Relations between classes/properties of the HoTS data model'
+weight: 0
+new_revision: false

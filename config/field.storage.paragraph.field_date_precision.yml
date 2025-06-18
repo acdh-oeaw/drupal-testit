@@ -1,0 +1,33 @@
+uuid: 08e42e74-4859-42d6-a7e0-d817537af617
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_date_precision
+field_name: field_date_precision
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: day
+      label: Exact
+    -
+      value: year
+      label: Year
+    -
+      value: month
+      label: Month
+    -
+      value: vague
+      label: Vague
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

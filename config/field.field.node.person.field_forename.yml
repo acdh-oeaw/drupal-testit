@@ -1,0 +1,19 @@
+uuid: bc1524ac-0e34-4a7f-899f-7f73e5ef56c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_forename
+    - node.type.person
+id: node.person.field_forename
+field_name: field_forename
+entity_type: node
+bundle: person
+label: Forename
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

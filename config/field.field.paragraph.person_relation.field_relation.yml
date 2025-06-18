@@ -1,0 +1,25 @@
+uuid: 03c9d3e0-7545-49c3-bdbf-6e501273276a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_relation
+    - paragraphs.paragraphs_type.person_relation
+id: paragraph.person_relation.field_relation
+field_name: field_relation
+entity_type: paragraph
+bundle: person_relation
+label: Relation
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: relations
+      display_name: entity_reference_relations_person
+      arguments: {  }
+field_type: entity_reference

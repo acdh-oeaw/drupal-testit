@@ -1,0 +1,159 @@
+uuid: 1478054e-7371-4b10-a91c-207cca727c51
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.event_relation.field_date_relation
+    - field.field.paragraph.event_relation.field_event_category
+    - field.field.paragraph.event_relation.field_reference_relation
+    - field.field.paragraph.event_relation.field_relation
+    - field.field.paragraph.event_relation.field_relation_type
+    - paragraphs.paragraphs_type.event_relation
+  module:
+    - entity_reference_revisions
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_threecol_section
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          column_widths: 25-50-25
+        components:
+          283314f3-3c39-4959-99ac-d648cbdc7dbd:
+            uuid: 283314f3-3c39-4959-99ac-d648cbdc7dbd
+            region: first
+            configuration:
+              id: 'field_block:paragraph:event_relation:field_relation_type'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: hidden
+                settings:
+                  link: false
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          c9474ebb-23af-4c5d-a137-d878df84958a:
+            uuid: c9474ebb-23af-4c5d-a137-d878df84958a
+            region: third
+            configuration:
+              id: 'field_block:paragraph:event_relation:field_reference_relation'
+              label: 'Reference relation'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_revisions_entity_view
+                label: hidden
+                settings:
+                  view_mode: default
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          12c1cd79-bc9c-4df6-8d68-474420faab3d:
+            uuid: 12c1cd79-bc9c-4df6-8d68-474420faab3d
+            region: second
+            configuration:
+              id: 'field_block:paragraph:event_relation:field_date_relation'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_revisions_entity_view
+                label: hidden
+                settings:
+                  view_mode: default
+                  link: ''
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          6fb48754-f611-4dba-92a1-6aaee18467ad:
+            uuid: 6fb48754-f611-4dba-92a1-6aaee18467ad
+            region: first
+            configuration:
+              id: 'field_block:paragraph:event_relation:field_relation'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: hidden
+                settings:
+                  link: false
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          4b584594-dddc-4a86-95bc-9bae8f318723:
+            uuid: 4b584594-dddc-4a86-95bc-9bae8f318723
+            region: second
+            configuration:
+              id: 'field_block:paragraph:event_relation:field_event_category'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+        third_party_settings: {  }
+id: paragraph.event_relation.default
+targetEntityType: paragraph
+bundle: event_relation
+mode: default
+content:
+  field_date_relation:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_event_category:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
+    region: second
+  field_reference_relation:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 3
+    region: second
+  field_relation:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_relation_type:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

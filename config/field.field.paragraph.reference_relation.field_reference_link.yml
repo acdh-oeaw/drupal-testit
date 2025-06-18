@@ -1,0 +1,23 @@
+uuid: fe268c92-973f-4da0-9bc8-f31696f3f76f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_reference_link
+    - paragraphs.paragraphs_type.reference_relation
+  module:
+    - link
+id: paragraph.reference_relation.field_reference_link
+field_name: field_reference_link
+entity_type: paragraph
+bundle: reference_relation
+label: 'Reference link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 2
+  link_type: 17
+field_type: link

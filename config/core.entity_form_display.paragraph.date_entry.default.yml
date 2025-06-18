@@ -1,0 +1,39 @@
+uuid: d253be8f-b2ef-4621-a838-bb75f0b6b64d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.date_entry.field_date
+    - field.field.paragraph.date_entry.field_date_precision
+    - field.field.paragraph.date_entry.field_vague_date
+    - paragraphs.paragraphs_type.date_entry
+  module:
+    - datetime
+id: paragraph.date_entry.default
+targetEntityType: paragraph
+bundle: date_entry
+mode: default
+content:
+  field_date:
+    type: datetime_default
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_date_precision:
+    type: options_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_vague_date:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

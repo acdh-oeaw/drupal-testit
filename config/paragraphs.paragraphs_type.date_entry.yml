@@ -1,0 +1,10 @@
+uuid: 7a93dc43-3667-4c1e-9336-6dd2066f8c28
+langcode: en
+status: true
+dependencies: {  }
+id: date_entry
+label: 'Date entry'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

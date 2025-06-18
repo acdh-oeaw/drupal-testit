@@ -1,0 +1,17 @@
+uuid: f1c66d76-9f4c-4d43-88f3-3c7c80a01d38
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Person
+type: person
+description: 'A human who lives or had lived.'
+help: null
+new_revision: true
+preview_mode: 0
+display_submitted: false

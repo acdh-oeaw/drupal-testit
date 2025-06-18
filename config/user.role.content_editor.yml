@@ -1,0 +1,93 @@
+uuid: 864276a1-ce3e-435c-be48-788bb1a49314
+langcode: de
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+    - filter.format.full_html
+    - filter.format.restricted_html
+    - node.type.article
+    - node.type.corporate_body
+    - node.type.page
+    - node.type.person
+    - node.type.project
+    - taxonomy.vocabulary.tags
+  module:
+    - comment
+    - contextual
+    - file
+    - filter
+    - help
+    - node
+    - path
+    - search
+    - system
+    - taxonomy
+    - toolbar
+_core:
+  default_config_hash: NtMgnXp0miNtJhag07NSjwdCm4zpJwhlDFs1HgyL4wI
+id: content_editor
+label: 'Content editor'
+weight: 2
+is_admin: false
+permissions:
+  - 'access administration pages'
+  - 'access comments'
+  - 'access content'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access files overview'
+  - 'access help pages'
+  - 'access toolbar'
+  - 'administer url aliases'
+  - 'create article content'
+  - 'create corporate_body content'
+  - 'create page content'
+  - 'create person content'
+  - 'create project content'
+  - 'create terms in tags'
+  - 'create url aliases'
+  - 'delete article revisions'
+  - 'delete corporate_body revisions'
+  - 'delete own article content'
+  - 'delete own corporate_body content'
+  - 'delete own files'
+  - 'delete own page content'
+  - 'delete own person content'
+  - 'delete own project content'
+  - 'delete page revisions'
+  - 'delete person revisions'
+  - 'delete project revisions'
+  - 'edit any article content'
+  - 'edit any corporate_body content'
+  - 'edit any page content'
+  - 'edit any person content'
+  - 'edit any project content'
+  - 'edit own article content'
+  - 'edit own comments'
+  - 'edit own corporate_body content'
+  - 'edit own page content'
+  - 'edit own person content'
+  - 'edit own project content'
+  - 'edit terms in tags'
+  - 'post comments'
+  - 'revert all revisions'
+  - 'revert article revisions'
+  - 'revert corporate_body revisions'
+  - 'revert page revisions'
+  - 'revert person revisions'
+  - 'revert project revisions'
+  - 'search content'
+  - 'skip comment approval'
+  - 'use advanced search'
+  - 'use text format basic_html'
+  - 'use text format full_html'
+  - 'use text format restricted_html'
+  - 'view all revisions'
+  - 'view article revisions'
+  - 'view corporate_body revisions'
+  - 'view own unpublished content'
+  - 'view page revisions'
+  - 'view person revisions'
+  - 'view project revisions'
+  - 'view the administration theme'

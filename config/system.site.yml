@@ -1,0 +1,15 @@
+_core:
+  default_config_hash: VDJxTZtQR21qB4lvOq8zszJZLvLKrSPQpdn2E3T71Ww
+langcode: de
+uuid: 91b1f37b-b375-4c6a-b492-57b6e48722c4
+name: 'HoTS: History of Theatre Studies'
+mail: klaus.illmayer@univie.ac.at
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: de
+mail_notification: ''

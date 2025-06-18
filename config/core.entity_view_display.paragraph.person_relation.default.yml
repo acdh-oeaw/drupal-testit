@@ -1,0 +1,102 @@
+uuid: a52adc70-8c3f-4b72-932b-b726823c4293
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.person_relation.field_person
+    - field.field.paragraph.person_relation.field_relation
+    - field.field.paragraph.person_relation.field_role
+    - paragraphs.paragraphs_type.person_relation
+  module:
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_threecol_section
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          column_widths: 25-25-50
+        components:
+          79bee5fe-02bb-4a0e-8000-eaf1287ad4fd:
+            uuid: 79bee5fe-02bb-4a0e-8000-eaf1287ad4fd
+            region: first
+            configuration:
+              id: 'field_block:paragraph:person_relation:field_relation'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: hidden
+                settings:
+                  link: false
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          b29cc8df-4cc0-499d-bfd4-59379ae09945:
+            uuid: b29cc8df-4cc0-499d-bfd4-59379ae09945
+            region: second
+            configuration:
+              id: 'field_block:paragraph:person_relation:field_role'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: hidden
+                settings:
+                  link: false
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          e5c5fd63-f375-417e-8d13-cb9bd6f48929:
+            uuid: e5c5fd63-f375-417e-8d13-cb9bd6f48929
+            region: third
+            configuration:
+              id: 'field_block:paragraph:person_relation:field_person'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: hidden
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+id: paragraph.person_relation.default
+targetEntityType: paragraph
+bundle: person_relation
+mode: default
+content:
+  field_person:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_relation:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_role:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

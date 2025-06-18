@@ -1,0 +1,43 @@
+uuid: 21961556-c331-422a-a2f4-ed45eea32ad1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_date_from
+    - paragraphs.paragraphs_type.date_entry
+    - paragraphs.paragraphs_type.date_relation
+  module:
+    - entity_reference_revisions
+id: paragraph.date_relation.field_date_from
+field_name: field_date_from
+entity_type: paragraph
+bundle: date_relation
+label: 'Date from'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      date_entry: date_entry
+    negate: 0
+    target_bundles_drag_drop:
+      date_entry:
+        weight: 6
+        enabled: true
+      date_relation:
+        weight: 7
+        enabled: false
+      event_relation:
+        weight: 8
+        enabled: false
+      identifier_relation:
+        weight: 9
+        enabled: false
+      person_relation:
+        weight: 10
+        enabled: false
+field_type: entity_reference_revisions

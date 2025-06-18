@@ -1,0 +1,34 @@
+uuid: 0e0ae32a-270e-4941-8178-5a339333df6c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_person_relations
+    - node.type.project
+    - paragraphs.paragraphs_type.person_relation
+  module:
+    - entity_reference_revisions
+id: node.project.field_person_relations
+field_name: field_person_relations
+entity_type: node
+bundle: project
+label: 'Person relations'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      person_relation: person_relation
+    negate: 0
+    target_bundles_drag_drop:
+      identifier_relation:
+        weight: 3
+        enabled: false
+      person_relation:
+        weight: 4
+        enabled: true
+field_type: entity_reference_revisions

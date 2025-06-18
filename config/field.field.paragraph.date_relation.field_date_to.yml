@@ -1,0 +1,43 @@
+uuid: afdd8b05-810d-426d-86df-d64ae704ecdc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_date_to
+    - paragraphs.paragraphs_type.date_entry
+    - paragraphs.paragraphs_type.date_relation
+  module:
+    - entity_reference_revisions
+id: paragraph.date_relation.field_date_to
+field_name: field_date_to
+entity_type: paragraph
+bundle: date_relation
+label: 'Date to'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      date_entry: date_entry
+    negate: 0
+    target_bundles_drag_drop:
+      date_entry:
+        weight: 6
+        enabled: true
+      date_relation:
+        weight: 7
+        enabled: false
+      event_relation:
+        weight: 8
+        enabled: false
+      identifier_relation:
+        weight: 9
+        enabled: false
+      person_relation:
+        weight: 10
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,46 @@
+services:
+
+  drupal:
+    container_name: drupal-testit
+    env_file: .env
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    ports:
+      - 8080:80
+    restart: always
+    volumes:
+      - type: bind
+        source: ./custom
+        target: /opt/drupal-repo/custom
+      - type: bind
+        source: ./composer
+        target: /opt/drupal-repo/composer
+      - type: bind
+        source: ./config
+        target: /opt/drupal-repo/config
+    depends_on:
+      mariadb:
+        condition: service_healthy
+
+  mariadb:
+    container_name: drupal-testit-mariadb
+    image: mariadb:10.5
+    ports:
+      - "${DBPORTCONTAINER}:3306"
+    environment:
+      MARIADB_ROOT_PASSWORD: ${DBROOTPSWD}
+      MARIADB_DATABASE: ${DBNAME}
+      MARIADB_USER: ${DBUSER}
+      MARIADB_PASSWORD: ${DBPSWD}
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      start_period: 10s
+      interval: 10s
+      timeout: 5s
+      retries: 3
+    volumes:
+      - mariadbdata:/var/lib/mysql
+
+volumes:
+  mariadbdata:

@@ -1,0 +1,91 @@
+uuid: 96edaa05-c78e-4cf8-8ccd-eb580d8e1fdf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.date_relation.field_date_from
+    - field.field.paragraph.date_relation.field_date_to
+    - field.field.paragraph.date_relation.field_relation
+    - paragraphs.paragraphs_type.date_relation
+  module:
+    - entity_reference_revisions
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          column_widths: 50-50
+        components:
+          afcabd98-035a-457c-99fe-6cc2e106d79d:
+            uuid: afcabd98-035a-457c-99fe-6cc2e106d79d
+            region: first
+            configuration:
+              id: 'field_block:paragraph:date_relation:field_date_from'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_revisions_entity_view
+                label: hidden
+                settings:
+                  view_mode: default
+                  link: ''
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          941abc8a-d26c-4be4-99b0-a2c1741668d4:
+            uuid: 941abc8a-d26c-4be4-99b0-a2c1741668d4
+            region: second
+            configuration:
+              id: 'field_block:paragraph:date_relation:field_date_to'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_revisions_entity_view
+                label: hidden
+                settings:
+                  view_mode: default
+                  link: ''
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+id: paragraph.date_relation.default
+targetEntityType: paragraph
+bundle: date_relation
+mode: default
+content:
+  field_date_from:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_date_to:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_relation:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

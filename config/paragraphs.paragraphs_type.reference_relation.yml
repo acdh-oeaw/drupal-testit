@@ -1,0 +1,10 @@
+uuid: 258c628c-614f-48fb-9343-86370e720c2d
+langcode: en
+status: true
+dependencies: {  }
+id: reference_relation
+label: 'Reference relation'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

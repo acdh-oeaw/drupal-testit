@@ -1,0 +1,111 @@
+uuid: 6b335ac3-9a59-405c-8e2f-bd353e5a9ed6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.identifier_relation.field_identifier_link
+    - field.field.paragraph.identifier_relation.field_relation
+    - field.field.paragraph.identifier_relation.field_relation_type
+    - paragraphs.paragraphs_type.identifier_relation
+  module:
+    - layout_builder
+    - link
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_threecol_section
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          column_widths: 25-25-50
+        components:
+          cb7286d9-3399-4995-b613-1dcace9ee348:
+            uuid: cb7286d9-3399-4995-b613-1dcace9ee348
+            region: first
+            configuration:
+              id: 'field_block:paragraph:identifier_relation:field_relation'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: hidden
+                settings:
+                  link: false
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          5951cbea-7f70-49bf-a0b8-6eb098d0fd2d:
+            uuid: 5951cbea-7f70-49bf-a0b8-6eb098d0fd2d
+            region: second
+            configuration:
+              id: 'field_block:paragraph:identifier_relation:field_relation_type'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: hidden
+                settings:
+                  link: false
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          52a985b2-f6ff-461c-a9a0-867f639030dd:
+            uuid: 52a985b2-f6ff-461c-a9a0-867f639030dd
+            region: third
+            configuration:
+              id: 'field_block:paragraph:identifier_relation:field_identifier_link'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: link
+                label: hidden
+                settings:
+                  trim_length: 80
+                  url_only: false
+                  url_plain: false
+                  rel: ''
+                  target: ''
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+id: paragraph.identifier_relation.default
+targetEntityType: paragraph
+bundle: identifier_relation
+mode: default
+content:
+  field_identifier_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_relation:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_relation_type:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

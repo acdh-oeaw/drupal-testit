@@ -1,0 +1,20 @@
+uuid: fbeee49f-ab8f-4e04-b1d9-73972bec826d
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.corporate_body
+  module:
+    - user
+id: node.corporate_body.default
+targetEntityType: node
+bundle: corporate_body
+mode: default
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

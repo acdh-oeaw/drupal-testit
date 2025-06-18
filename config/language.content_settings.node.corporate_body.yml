@@ -1,0 +1,11 @@
+uuid: dfa3fd07-06f6-4b3e-b10b-ee22a245edb2
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.corporate_body
+id: node.corporate_body
+target_entity_type_id: node
+target_bundle: corporate_body
+default_langcode: site_default
+language_alterable: false

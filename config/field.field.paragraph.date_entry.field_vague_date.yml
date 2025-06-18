@@ -1,0 +1,19 @@
+uuid: a7d001b5-ee20-48a4-8ac3-2816458f0f22
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_vague_date
+    - paragraphs.paragraphs_type.date_entry
+id: paragraph.date_entry.field_vague_date
+field_name: field_vague_date
+entity_type: paragraph
+bundle: date_entry
+label: 'Vague date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

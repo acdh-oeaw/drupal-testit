@@ -1,0 +1,11 @@
+uuid: 22eafd5e-330b-4a0a-8a95-cb28c8d18ca1
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.hots_relation
+id: taxonomy_term.hots_relation
+target_entity_type_id: taxonomy_term
+target_bundle: hots_relation
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,10 @@
+uuid: ca186928-9df1-4333-8339-02f141b73d05
+langcode: en
+status: true
+dependencies: {  }
+id: date_relation
+label: 'Date relation'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }
