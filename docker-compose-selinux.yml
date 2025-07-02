@@ -12,14 +12,14 @@ services:
     volumes:
       - type: bind
         source: ./custom
-        target: /opt/drupal-repo/custom
+        target: /opt/drupal-repo/custom:Z
       - type: bind
         source: ./composer
-        target: /opt/drupal-repo/composer
+        target: /opt/drupal-repo/composer:Z
       - type: bind
         source: ./config
-        target: /opt/drupal-repo/config
-      - drupal_files:/opt/drupal/web/sites/default/files
+        target: /opt/drupal-repo/config:Z
+      - drupal_files:/opt/drupal/web/sites/default/files:Z,U
     depends_on:
       mariadb:
         condition: service_healthy
@@ -41,7 +41,7 @@ services:
       timeout: 5s
       retries: 3
     volumes:
-      - mariadbdata:/var/lib/mysql
+      - mariadbdata:/var/lib/mysql:Z,U
 
 volumes:
   mariadbdata:

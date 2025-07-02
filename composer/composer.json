@@ -35,7 +35,7 @@
         "drupal/core-recommended": "^10.1",
         "drupal/paragraphs": "^1.17",
         "drupal/token": "^1.15",
-        "drush/drush": "^12.4"
+        "drush/drush": "^13"
     },
     "conflict": {
         "drupal/drupal": "*"
