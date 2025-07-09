@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# adapt Apache configuration
+sed -i /etc/apache2/ports.conf -e "s/Listen 80/Listen ${WEBPORT}/g"
+
+# prepare Drupal configurations and installation
 if [[ -f /opt/drupal/web/sites/default/settings.php ]]
 then
   echo "settings.php found, using it"
@@ -8,17 +12,14 @@ else
   cp /opt/drupal/web/sites/default/default.settings.php /opt/drupal/web/sites/default/settings.php
   # inject the correct values
   sed -i /opt/drupal-repo/docker/drupal_settings.php \
-    -e "s/DBNAME/${DBNAME:-}/g" \
-    -e "s/DBUSER/${DBUSER:-}/g" \
-    -e "s/DBPSWD/${DBPSWD:-}/g" \
-    -e "s/DBPREFIX/${DBPREFIX:-}/g" \
-    -e "s/DBHOST/${DBHOST:-}/g" \
-    -e "s/DBPORT/${DBPORT:-}/g" \
-    -e "s/DRUPALHASH/${DRUPALHASH:-}/g"
-  #  -e "s|DRUPALTRUSTEDHOST|$DRUPALTRUSTEDHOST/g"
-  # temporary deactivate trustedhost - copied here to test how to get it to work - delete and only use the one above when it works
-  # sed -i /opt/drupal-repo/docker/drupal_settings.php \
-  #   -e "s|DRUPALTRUSTEDHOST|${DRUPALTRUSTEDHOST:-}|g"
+    -e "s/DBNAME/${DBNAME}/g" \
+    -e "s/DBUSER/${DBUSER}/g" \
+    -e "s/DBPSWD/${DBPSWD}/g" \
+    -e "s/DBPREFIX/${DBPREFIX}/g" \
+    -e "s/DBHOST/${DBHOST}/g" \
+    -e "s/DBPORT/${DBPORT}/g" \
+    -e "s/DRUPALHASH/${DRUPALHASH}/g"
+#    -e "s|DRUPALTRUSTEDHOST|${DRUPALTRUSTEDHOST}/g"
   cat /opt/drupal-repo/docker/drupal_settings.php >> /opt/drupal/web/sites/default/settings.php
 fi
 
@@ -82,6 +83,11 @@ else
   # update: standard will not work with configexist, as it has a hook_install, thus need to use minimal and to convert old ones to minimal
   drush site:install ${DRUPALINSTALLMODE} --no-interaction -vvv --db-url="${DBDRIVER}://${DBUSER}:${DBPSWD}@${DBHOST}:${DBPORT}/${DBNAME}" --site-name="${SITENAME}" --account-name="${DRUPALUSER}" --account-pass="${DRUPALPSWD}"${CONFIGEXIST}
 fi
+
+# use the correct permissions and user/group for the files directory
+# tbd: only after a site:install because otherwise it should be already set?
+chmod -R 775 /opt/drupal/web/sites/default/files
+chown -R www-data:www-data /opt/drupal/web/sites/default/files
 
 # clean and rebuild the cache
 drush --no-interaction cache:rebuild
